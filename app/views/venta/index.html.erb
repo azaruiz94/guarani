@@ -1,37 +1,40 @@
 <%= javascript_include_tag 'creative/manifest.js' %>
 <%=render(partial: 'creatives/navbar') %>
 
-<div class="container-fluid">
-  <h1>Ventas</h1>
-  <div class="row">
-    <% @inmuebles.each do |inmueble| %>
-      <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box">
-                  <div class="card h-100">
-                    <%= image_tag "creative/portfolio/2.jpg", class: "img-responsive", alt: "" %>
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Código
-                            </div>
-                            <div class="project-name">
-                                <%= inmueble.codigo %>
-                            </div>
-                        </div>
-                    </div>
-                    <h4 class="card-title">
-              <a href="#"><%= inmueble.nombre %></a>
-            </h4>
-            <p class="card-text"><%= inmueble.direccion %></p>
-                  </div>
-                </a>
-            </div>
-    <% end -%>
-  </div>
-  <div class="pagination justify-content-center col-xs-12" style="text-align: center;">
-    <%= will_paginate @inmuebles, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
-  </div>
-</div>
+<section>
+	<div class="container-fluid">
+	  <h1>Ventas</h1>
+	  <div class="row">
+	    <% @inmuebles.each do |inmueble| %>
+	      <div class="col-lg-4 col-sm-6">
+	                <a href="#" class="portfolio-box">
+	                  <div class="card h-100">
+	                    <%= image_tag "creative/portfolio/2.jpg", class: "img-responsive", alt: "" %>
+	                    <div class="portfolio-box-caption">
+	                        <div class="portfolio-box-caption-content">
+	                            <div class="project-category text-faded">
+	                                Código
+	                            </div>
+	                            <div class="project-name">
+	                                <%= inmueble.codigo %>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <h4 class="card-title">
+	              <a href="#"><%= inmueble.nombre %></a>
+	            </h4>
+	            <p class="card-text"><%= inmueble.direccion %></p>
+	                  </div>
+	                </a>
+	            </div>
+	    <% end -%>
+	  </div>
+	  <div class="pagination justify-content-center col-xs-12" style="text-align: center;">
+	    <%= will_paginate @inmuebles, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+	  </div>
+	</div>
+</section>
+
 
 <%=render(partial: 'creatives/call_to_action') %>
 <%=render(partial: 'creatives/contact') %>

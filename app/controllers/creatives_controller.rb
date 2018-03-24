@@ -1,5 +1,4 @@
 class CreativesController < ApplicationController
-  layout "creative"
 
   def index
   	@@inmuebles = Inmueble.all
