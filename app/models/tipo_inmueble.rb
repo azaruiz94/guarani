@@ -1,0 +1,2 @@
+class TipoInmueble < ApplicationRecord
+end

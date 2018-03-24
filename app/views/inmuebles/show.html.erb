@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @inmueble.nombre %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @inmueble.direccion %>
+</p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @inmueble.codigo %>
+</p>
+
+<%= link_to 'Edit', edit_inmueble_path(@inmueble) %> |
+<%= link_to 'Back', inmuebles_path %>

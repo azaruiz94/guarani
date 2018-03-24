@@ -1,0 +1,17 @@
+<%= form_tag(inmuebles_path, method: :get) do %>
+	<div class="col-md-3">
+	    <%= select_tag( :servicio_id, options_for_select(@servicios.collect { |r| [r.nombre, r.id ]}), {class: "form-control", id: "servicio_select"})%>
+	</div>
+		
+	<div class="col-md-3">
+	    <%= select_tag( :tipo_inmueble_id, options_for_select(@tipos_inmuebles.collect { |r| [r.nombre, r.id ]}), {class: "form-control", id: "tipo_inmueble_select"})%>
+	</div>
+    
+    <div class="col-md-3">
+	    <%= select_tag( :distrito_id, options_for_select(@distritos.collect { |r| [r.nombre + ", "+ r.departamento.nombre, r.id ]}), {class: "js-example-basic-single form-control", id: "distrito_select"})%>
+    </div>
+
+    <div class="col-md-1">
+    	 <a class="btn btn-primary btn-md page-scroll" id="result_button" onclick="showResults()">Buscar</a>
+    </div>
+<% end %>

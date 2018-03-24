@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</head>
+
+<body class="<%= params[:controller].parameterize %> <%= action_name %>">
+  <div class="wrapper">
+
+    <%=render(partial: 'creatives/navbar') %>
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+
+      <!-- Main content -->
+      <section class="content">
+        <%=render(partial: 'resultado/list') %>
+      </section><!-- /.content -->
+      <%=render(partial: 'creatives/bg_primary') %>
+  	  <%=render(partial: 'creatives/call_to_action') %>
+    </div><!-- /.content-wrapper -->
+    
+  </div><!-- ./wrapper -->
+  
+
+  
+</body>
+</html>

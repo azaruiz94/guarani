@@ -1,0 +1,29 @@
+<header>
+    <div class="header-content">
+        <div class="header-content-inner">
+            <h1>Your Favorite Source of Free Bootstrap Themes</h1>
+            <hr>
+            <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
+            <div class="container">
+            	<div class="row">
+            		<div align="center">
+            			<%=render(partial: 'inmuebles/filters') %>
+		  			</div>
+            		
+            	</div>
+            	
+            </div>
+        </div>
+    </div>
+</header>
+<script type="text/javascript">
+	function showResults() {
+	  var servicio= $("#servicio_select").val()
+	  var tipo= $("#tipo_inmueble_select").val()
+	  var distrito= $("#distrito_select").val()
+	  var url= '/inmuebles?distrito_id='+distrito+'&servicio_id='+servicio+'&tipo_inmueble_id='+tipo
+	  //window.open('/inmuebles?distrito_id='+distrito+'&servicio_id='+servicio+'&tipo_inmueble_id='+tipo)
+	  window.location.replace(url);
+	}
+</script>
+

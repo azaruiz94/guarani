@@ -1,0 +1,13 @@
+.col-md-3{
+	padding-right: 2px;
+    padding-left: 2px;
+}
+
+.portfolio-item {
+    margin-bottom: 30px;
+}
+
+.col-lg-6.portfolio-item {
+  margin-bottom: 30px;
+}
+
